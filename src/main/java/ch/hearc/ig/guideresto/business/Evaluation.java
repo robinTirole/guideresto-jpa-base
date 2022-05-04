@@ -9,11 +9,16 @@ import java.util.Set;
 public abstract class Evaluation {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE,
+          generator = "SEQ_EVAL")
+  @SequenceGenerator(name="SEQ_EVAL",
+          sequenceName="SEQ_EVAL",
+          allocationSize=1)
   @Column(name = "NUMERO")
   private Integer id;
   @Column(name = "DATE_EVAL")
   private LocalDate visitDate;
-  @ManyToOne
+  @OneToOne
   @JoinColumn(name = "FK_REST")
   private Restaurant restaurant;
 

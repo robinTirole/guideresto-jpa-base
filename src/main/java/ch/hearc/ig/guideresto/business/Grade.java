@@ -7,8 +7,8 @@ import javax.persistence.*;
 public class Grade {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE,
-            generator="SEQ_GRADES")
-    @SequenceGenerator(name="SEQ_GRADES",
+            generator="SEQ_NOTES")
+    @SequenceGenerator(name="SEQ_NOTES",
             sequenceName="SEQ_NOTES",
             initialValue=1,
             allocationSize=1)

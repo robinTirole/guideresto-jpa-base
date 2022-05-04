@@ -6,14 +6,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "LIKES")
+@Table(name = "COMMENTAIRES")
 public class CompleteEvaluation extends Evaluation {
 
   @Column(name = "COMMENTAIRE")
   private String comment;
   @Column(name = "NOM_UTILISATEUR")
   private String username;
-  @ManyToOne
+  @OneToMany
   @JoinColumn(name = "FK_REST")
   private Set<Grade> grades;
 
